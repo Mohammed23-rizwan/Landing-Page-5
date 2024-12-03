@@ -64,7 +64,7 @@ const DetailsFi = () => {
           <img src={img4} className="w-full h-full" alt="" />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 text-white px-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 text-white px-10 lg:px-20">
         <div>
           <h2 className="md:text-5xl text-2xl font-bold">
             <span className="text-[#149644]">
@@ -72,6 +72,7 @@ const DetailsFi = () => {
               <br className="hidden md:block" /> with cutting-edge skills
             </span>{" "}
             <span className="text-[#0EA5E9]">
+              <br className="block md:hidden" />
               New, Embrace innovation,
               <br className="hidden md:block" /> master technology, &
               <br className="hidden md:block" /> shape the digital world

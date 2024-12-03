@@ -1,10 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeFi from "./pages/HomeFi";
+import FormpageFi from "./pages/FormpageFi";
 
 const App = () => {
   return (
-    <div>
-      <HomeFi />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomeFi />} />
+        <Route path="/form" element={<FormpageFi />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

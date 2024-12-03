@@ -1,4 +1,5 @@
 import heroimg from "../assets/img/Background Hero.svg";
+import NavbarFi from "./NavbarFi";
 
 const HeroFi = () => {
   return (
@@ -10,16 +11,7 @@ const HeroFi = () => {
           alt="Background"
         />
       </div>
-      <nav className="w-[85%] h-[50px] bg-transparent border border-white fixed z-10 top-10 rounded-[5px] mr-auto ml-auto flex justify-between items-center px-3">
-        <div>
-          <h2 className="text-[#C9FD02] text-xl tracking-[1px] font-extrabold ">
-            Learn Hub
-          </h2>
-        </div>
-        <div>
-          <p className="text-white text-[15px]">Admin</p>
-        </div>
-      </nav>
+      <NavbarFi />
       <div className="w-full h-full flex justify-center items-center flex-col z-20 text-white text-center">
         <h2 className=" text-3xl md:text-6xl font-bold mb-6">
           Learn from the best, be
