@@ -24,7 +24,7 @@ const FormFi = () => {
     <div className="w-full h-full py-32 text-white flex flex-col justify-center items-center">
       <h2 className="text-2xl font-bold text-[#C9FD02]">Fill This Form</h2>
       <form action="" className="w-full mt-5">
-        <div className="grid grid-cols-2 px-20 gap-10">
+        <div className="grid  grid-cols-1 md:grid-cols-2 px-20 gap-10">
           <div className=" flex flex-col">
             <label htmlFor="" className="text-2xl font-bold text-[#C9FD02]">
               Name:
