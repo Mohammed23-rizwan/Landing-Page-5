@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FooterFi = () => {
   return (
     <div className="bg-black text-white py-20">
@@ -7,9 +9,9 @@ const FooterFi = () => {
           © 2022 Tailwind Labs Inc. All rights reserved.
         </p>
         <div className="flex gap-2 pt-4">
-          <p>Form</p>
+          <Link to="/form">Form</Link>
           <div className="inline-block  min-h-[20%] w-0.5 self-stretch bg-[#303132]"></div>
-          <p>Admin</p>
+          <Link to="/">Admin</Link>
         </div>
       </div>
     </div>
