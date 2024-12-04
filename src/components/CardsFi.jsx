@@ -2,7 +2,7 @@ import { Users } from "../assets/Javascript-Data/Users";
 
 const CardsFi = () => {
   return (
-    <div className="grid grid-cols-3 px-8 py-4 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-8 py-4 gap-5">
       {Users.map((user) => {
         return (
           <div key={user.id} className="bg-white rounded-[6px] h-[350px] p-5">
@@ -38,7 +38,7 @@ const CardsFi = () => {
                 </li>
               </ul>
             </div>
-            <h2 className="w-full py-2 mt-10 rounded-[5px] bg-red-300 text-center">
+            <h2 className="w-full py-2 mt-10 rounded-[5px] bg-[#EF4444] text-white text-center">
               Delete
             </h2>
           </div>

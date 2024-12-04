@@ -1,4 +1,25 @@
+import { useState } from "react";
+import { Users } from "../assets/Javascript-Data/Users";
+
 const FormFi = () => {
+  const [dis, setdis] = useState(Users);
+  const [get, setGet] = useState();
+
+  const handlesubmit = () => {
+    setdis(...dis, get);
+    console.log(get);
+    // e.preventDefault();
+  };
+
+  const handlechange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setGet((values) => ({
+      ...values,
+      [name]: value,
+    }));
+  };
+
   return (
     <div className="w-full h-full py-32 text-white flex flex-col justify-center items-center">
       <h2 className="text-2xl font-bold text-[#C9FD02]">Fill This Form</h2>
@@ -12,6 +33,8 @@ const FormFi = () => {
               type="text"
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
               placeholder="UserName"
+              name="name"
+              onChange={handlechange}
             />
           </div>
           <div className=" flex flex-col">
@@ -22,6 +45,8 @@ const FormFi = () => {
               type="text"
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
               placeholder="UserName"
+              name="role"
+              onChange={handlechange}
             />
           </div>
           <div className=" flex flex-col">
@@ -32,6 +57,8 @@ const FormFi = () => {
               type="text"
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
               placeholder="UserName"
+              name="email"
+              onChange={handlechange}
             />
           </div>
           <div className=" flex flex-col">
@@ -42,6 +69,8 @@ const FormFi = () => {
               type="text"
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
               placeholder="UserName"
+              name="phonenumber"
+              onChange={handlechange}
             />
           </div>
           <div className=" flex flex-col">
@@ -49,9 +78,10 @@ const FormFi = () => {
               Course:
             </label>
             <select
-              name=""
+              name="course"
               id=""
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
+              onClick={handlechange}
             >
               <option value>select a course</option>
               <option value="Reactjs">React js</option>
@@ -66,9 +96,10 @@ const FormFi = () => {
               Status:
             </label>
             <select
-              name=""
+              name="status"
               id=""
               className="w-full h-[60px] rounded-[5px] border-none outline-none text-black px-2 bg-none"
+              onClick={handlechange}
             >
               <option value="Placed">Placed</option>
               <option value="unPlaced">Unplaced</option>
@@ -76,7 +107,11 @@ const FormFi = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-          <button className="w-[170px] h-14 rounded-full border border-rose-50">
+          <button
+            className="w-[170px] h-14 rounded-full border border-rose-50"
+            type="submit"
+            onClick={handlesubmit}
+          >
             Submit
           </button>
         </div>
